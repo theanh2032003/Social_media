@@ -1,0 +1,67 @@
+.messageContainer {
+  margin: 5px 0;
+  .leftMessage {
+    width: 300px;
+    // padding: 10px;
+    display: flex;
+    align-items: flex-end;
+    .avatar {
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      .image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-bottom: 5px;
+      }
+
+      .text {
+        margin: 0;
+        background-color: var(--twitter-background);
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        border-radius: 20px;
+        width: fit-content;
+      }
+    }
+  }
+
+  .rightMessage {
+    width: 300px;
+    float: right;
+    // padding: 10px;
+    display: flex;
+    align-items: flex-end;
+justify-content: flex-end;
+    .avatar {
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      align-items: flex-end;
+      .image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-bottom: 5px;
+      }
+
+      .text {
+        margin: 0;
+        width: fit-content;
+        background-color: var(--twitter-color);
+        color: white;
+        padding: 10px;
+        border-radius: 20px;
+      }
+    }
+  }
+}

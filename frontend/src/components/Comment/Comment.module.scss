@@ -1,0 +1,117 @@
+.commentContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-left: 10px;
+  height: fit-content;
+  .comment {
+    // display: flex;
+    margin-left: 10px;
+    width: 100%;
+    .content {
+      background-color: var(--twitter-background);
+      border-radius: 20px;
+      padding: 12px;
+      width: fit-content;
+      .fullname {
+        font-weight: 600;
+      }
+
+      .cmtContent {
+      }
+    }
+
+    .propertie {
+      display: flex;
+
+      .rep {
+        margin-left: 20px;
+        font-weight: 600;
+      }
+
+      .time{
+        margin-left: 10px;
+      }
+
+      .rep:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .time:hover{
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    .numOfDescendants{
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        width: 100%;
+        .NumOfDescendantsText{
+            margin-left: 10px;
+            font-weight: 600;
+        }
+    }
+
+    .numOfDescendants:hover{
+        .NumOfDescendantsText{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .createCommentAtCmt {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        height: fit-content;
+        border-radius: 20px;
+        padding: 15px;
+    
+        .inputCommentAraeAtCmt {
+          padding-left: 10px;
+          background-color: var(--twitter-background);
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: 0 10px;
+          width: 100%;
+          height: fit-content;
+          padding: 5px 5px 5px 20px ;
+          .cmtInputAtCmt {
+            border: none;
+            height: 20px;
+            width: 90%;
+            appearance: none;
+            font-size: 15px;
+            overflow: hidden;
+            resize: none;
+            height: auto;
+            background-color: var(--twitter-background);
+          }
+    
+          .cmtInputAtCmt:focus {
+            outline: none;
+          }
+    
+          .sendCmtAtCmt {
+            float: inline-end;
+            width: fit-content;
+            border-radius: 50%;
+            padding: 5px 5px 2px 8px;
+            color: var(--twitter-color);
+            right: 10px;
+            bottom: 0;
+          }
+    
+          .sendCmtAtCmt:hover {
+            background-color: #d8dde0;
+          }
+        }
+      }
+  }
+}

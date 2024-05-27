@@ -1,0 +1,71 @@
+.postDetail {
+  // position: relative;
+  height: fit-content;
+  padding-bottom: 200px;
+  .backHome {
+    width: fit-content;
+    border-radius: 50%;
+    padding: 5px 5px 2px 5px;
+  }
+
+  .backHome:hover {
+    background-color: var(--twitter-background);
+  }
+
+
+  .createComment {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid var(--twitter-background);
+    // border-bottom: 2px solid var(--twitter-background);
+    // margin-bottom: 20px;
+    width: 570px;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 15px;
+
+    .inputCommentArae {
+      padding-left: 10px;
+      background-color: var(--twitter-background);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 10px;
+      width: 100%;
+      height: fit-content;
+      padding: 5px 5px 5px 20px;
+      .cmtInput {
+        border: none;
+        height: 20px;
+        width: 90%;
+        appearance: none;
+        font-size: 15px;
+        overflow: hidden;
+        resize: none;
+        background-color: var(--twitter-background);
+      }
+
+      .cmtInput:focus {
+        outline: none;
+      }
+
+      .sendCmt {
+        float: inline-end;
+        width: fit-content;
+        border-radius: 50%;
+        padding: 5px 5px 2px 8px;
+        color: var(--twitter-color);
+        right: 10px;
+        bottom: 0;
+      }
+
+      .sendCmt:hover {
+        background-color: #d8dde0;
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.login{
+    height: 100%;
+}
+
+.loginContainer{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: fit-content;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+.loginImage img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.mainLogin{
+    width: 50%;
+    padding-left: 50px;
+    padding-top: 30%;
+}
+
+.loginContainer span{
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.loginContainer h1{
+    padding: 30px 0;
+}
+
+.orContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .line {
+    flex-grow: 1;
+    height: 1px;
+    background: #EFF3F4;
+  }
+  
+  .text {
+    margin: 0 20px;
+    font-size: 12px;
+  }
+
+  .loginBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--twitter-color);
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 20px;
+    height: 40px;
+    width: 100%;
+    margin: 10px 0 10px 0;
+  }
+  
+  .loginBtn:hover{
+    background-color:#0f8adb ;
+  }
+
+  .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .inputForm .textHeader{
+    /* width: 100%; */
+    font-size: 40px;
+    font-weight: 700;
+    text-align: left;
+    width: 80%;
+  }
+
+  .inputForm{
+    display: flex;
+    flex-direction: column;
+    /* padding: 0 80px; */
+    justify-content: center;
+    align-items: center;
+    min-width: 600px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+  }
+
+  .input{
+    height: 40px;
+    width: 80%;
+    border-radius: 5px;
+    margin: 15px 0;
+    text-align: left;
+    font-size: 20px;
+    border:1px solid #999999;
+    padding-left: 10px;
+    outline:var(--twitter-color);
+  }
+
+  .input:focus{
+    border: 2px solid var(--twitter-color);
+  }
+
+  .closeIcon{
+    width: 80%;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: 5px;
+  }
+
+  .closeIcon:hover{
+    border-radius: 50%;
+    background-color: #999999;
+  }
+
+  .loginText {
+    margin: 10px 0;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .loginText a {
+    color: #07629e;
+    text-decoration: none;
+  }
+  
+  .loginText a:hover {
+    text-decoration: underline;
+  }
+
+
+  .btnForm{
+    width: 50%;
+  }
+
+  .errorMessage{
+    color: red;
+  }

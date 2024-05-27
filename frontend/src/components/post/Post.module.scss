@@ -1,0 +1,134 @@
+.post {
+  display: flex;
+  flex-direction: column; /* Để các phần tử bên trong nằm dọc */
+  border-top: 1px solid var(--twitter-background);
+  border-bottom: 1px solid var(--twitter-background);
+  border-radius: 8px;
+  margin-top: 20px;
+
+  .body {
+    .header {
+      display: flex;
+      align-items: center; /* Canh giữa các phần tử theo chiều dọc */
+      justify-content: space-between;
+
+      .info {
+        display: flex;
+        align-items: center; /* Canh giữa các phần tử theo chiều dọc */
+
+        .avatar {
+          padding: 10px;
+          margin-right: 10px;
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+          }
+        }
+
+        .headerText {
+          display: flex;
+          flex-direction: column; /* Đặt displayName và username dọc */
+          .textId {
+            color: #777;
+          }
+        }
+      }
+
+      .deleteBtn{
+        margin-right: 20px;
+        border-radius: 50%;
+        padding: 5px 5px 2px 5px;
+      }
+
+      .deleteBtn:hover{
+        background-color: var(--twitter-background);
+      }
+    }
+
+    .content {
+      padding-left: 10px;
+      padding-bottom: 20px;
+    }
+
+    .imagesWrapper {
+      overflow: hidden; /* Ẩn phần ảnh vượt ra ngoài container */
+
+      .images {
+        display: flex;
+        transition: transform 0.1s ease; /* Thêm hiệu ứng khi chuyển ảnh */
+
+        .di {
+          width: 100%; /* Kế thừa chiều rộng từ div cha */
+          flex-shrink: 0; /* Đảm bảo các phần tử không bị co lại khi container thay đổi kích thước */
+    
+          img {
+            width: 100%; /* Ảnh chiếm toàn bộ chiều rộng của div */
+            height: auto; /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
+            border-radius: 8px 8px 0 0; /* Bo tròn góc cho ảnh */
+          }
+    
+          video {
+            width: 100%; /* Video chiếm toàn bộ chiều rộng của div */
+            height: auto; /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
+            border-radius: 8px 8px 0 0; /* Bo tròn góc cho video */
+          }
+        }
+      }
+    }
+
+    .scrollBtn {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      padding: 0 10px;
+
+      .prevButton,
+      .nextButton {
+        padding: 8px 16px;
+        background-color: #ccc;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .prevButton:hover,
+      .nextButton:hover {
+        background-color: #999;
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+
+      .footer > * {
+        margin-right: 10px;
+        color: #777;
+        cursor: pointer;
+      }
+
+      .footer > *:last-child {
+        margin-right: 0;
+      }
+      div {
+        display: flex;
+        flex-direction: column; /* Hiển thị các phần tử theo chiều dọc */
+
+        .like_btn {
+          color: #ff0000;
+        }
+      }
+      p {
+        margin: auto;
+      }
+
+      svg {
+        align-self: center; /* căn giữa theo chiều ngang */
+      }
+    }
+  }
+}

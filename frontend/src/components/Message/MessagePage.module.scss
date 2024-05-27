@@ -1,0 +1,134 @@
+.MessagePage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: inherit;
+  overflow: auto;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    border-bottom: 1px solid var(--twitter-background);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: inherit;
+    background-color: white;
+    .avatar {
+      height: 40px;
+      width: 40px;
+      margin-left: 20px;
+    }
+
+    .name {
+      margin-left: 10px;
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    .call{
+      height: 30px;
+      width: 35px;
+      margin-right: 20px;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    .call:hover{
+      background-color: var(--twitter-background);
+    }
+  }
+
+  .messagesWrapper {
+    flex: 1;
+    overflow-y: auto; 
+    margin-top: 65px;
+    margin-bottom: 80px;
+    padding: 10px;
+    // margin-bottom: ;
+    .messagesContainer {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .sendMessage {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: inherit;
+    min-height: 60px;
+    height: fit-content;
+    border-top: 1px solid var(--twitter-background);
+    border-bottom: 1px solid var(--twitter-background);
+    align-items: center;
+    background-color: white;
+    .image {
+      margin-left: 20px;
+      .insertIcon {
+      }
+    }
+
+    .contentInput {
+      background-color: var(--twitter-background);
+      width: 100%;
+      border-radius: 20px;
+      height: fit-content;
+      margin: 10px;
+      padding-top: 10px;
+      .imagePreview {
+        display: flex;
+        flex-wrap: wrap;
+        .imageContainer {
+          position: relative;
+          .image{
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+          }
+
+          .deleteIcon {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            border: 1px solid gray;
+          }
+
+          .deleteIcon:hover{
+            background-color: var(--twitter-background);
+          }
+        }
+      }
+
+      .content {
+        // margin: 10px;
+        background-color: var(--twitter-background);
+        display: flex;
+        align-items: center;
+        border: none;
+        border-radius: 20px;
+        width: 90%;
+        padding-left: 20px;
+        padding-right: 10px;
+        overflow: hidden;
+        resize: none;
+        height: fit-content;
+        appearance: none;
+        font-size: 15px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+      }
+
+      .content:focus {
+        outline: none;
+      }
+    }
+  }
+}

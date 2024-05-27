@@ -1,0 +1,60 @@
+.widgets {
+    
+  }
+  
+  .widgets__input {
+    display: flex;
+    align-items: center;
+    background-color: var(--twitter-background);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  
+  .widgets__input:focus-within {
+    background-color: white;
+    border: 1px solid var(--twitter-color); /* Thay đổi màu viền khi focus */
+  }
+  
+  .widgets__input > input {
+    border: none;
+    background-color: transparent; /* Đổi màu nền của input thành trong suốt */
+  }
+  
+  .widgets__input > input:focus {
+    outline: none;
+  }
+  
+  .widgets__searchIcon {
+    color: gray;
+  }
+  
+  .widgets__input:focus-within .widgets__searchIcon {
+    color: var(--twitter-color); /* Thay đổi màu của biểu tượng search khi focus */
+  }
+  
+  .widgets__widgetContainer {
+    margin-top: 15px;
+    margin-left: 20px;
+    /* padding: 20px; */ 
+    background-color: #f5f8fa;
+    border-radius: 20px;
+  }
+  
+  .widgets__widgetContainer > h2 {
+    font-size: 18px;
+    font-weight: 800;
+    padding: 20px;
+  }
+
+  .widgets__widgetContainer .widgetsOption:last-child:hover{
+    border-radius: 0px 0px 20px 20px;
+  }
+
+
+  @media (max-width: 768px) {
+    .widgets {
+      display: none; /* Ẩn phần tử text khi thu nhỏ màn hình */
+    }
+  }

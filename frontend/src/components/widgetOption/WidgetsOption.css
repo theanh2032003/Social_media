@@ -1,0 +1,44 @@
+.widgetsOption {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    /* width: 100%; */
+  }
+
+  .widgetsOption:hover{
+    background-color: #97a0a0;
+  }
+  .profile-pic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px ;
+  }
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+  }
+  .widgetsOption .follow-btn {
+    margin-left: auto;
+    /* padding: 5px 10px; */
+    border-radius: 20px;
+    background-color: #0F1419;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .widgetsOption .follow-btn:hover{
+    background-color: #404244;
+  }
+
+  .widgetsOption,
+.widgetsOption strong,
+.widgetsOption span {
+  text-decoration: none;
+  color: inherit;
+}

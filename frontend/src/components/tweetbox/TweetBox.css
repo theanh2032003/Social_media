@@ -1,0 +1,90 @@
+.tweetBox {
+    padding-bottom: 10px;
+    border-bottom: 8px solid var(--twitter-background);
+    padding-right: 10px;
+  }
+  
+  .tweetBox > form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tweetBox__input {
+    padding: 20px;
+    display: flex;
+  }
+  
+  .tweetBox__input > input {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+  }
+
+  .tweetBox__input > input {
+    outline: none;
+  }
+  
+  .tweetBox__imageInput {
+    border: none;
+    padding: 10px;
+  }
+
+  .custom-file-upload{
+    text-align: center;
+  }
+
+  .insertPhotoIcon{
+    color: var(--twitter-color);
+  }
+  
+  .tweetBox__imagesPreview {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tweetBox__imagesPreview img,video{
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  .uploaded-image {
+    position: relative;
+    max-width: calc(100% / 3); 
+    height: auto;
+  }
+  
+  .uploaded-image img {
+    display: block; 
+  }
+  
+  .uploaded-image .delete_image {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    background: none;
+    border: 1px solid black;
+    border-radius: 50%;
+    /* padding: 5px; */
+    cursor: pointer;
+  }
+  
+  /* Thay đổi biểu tượng của nút xóa thành biểu tượng "x" */
+  .uploaded-image .delete_image::after {
+    content: 'x';
+    font-size: 16px;
+  }
+
+
+  .tweetBox__tweetButton {
+    background-color: var(--twitter-color) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    width: 80px;
+    height: 40px !important;
+    margin-top: 20px !important;
+    margin-left: auto !important;
+  }

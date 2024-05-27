@@ -1,0 +1,11 @@
+.sidebar {
+    
+  }
+  
+  .sidebar__twitterIcon {
+    color: var(--twitter-color);
+    font-size: 30px !important;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  

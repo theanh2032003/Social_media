@@ -1,0 +1,117 @@
+.editProfile {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+  height: 100vh;
+  padding: 20px;
+  border-radius: 10px;
+
+  .editHeader {
+    display: flex;
+    justify-content: space-between;
+    .text {
+      display: flex;
+      align-items: center;
+      p {
+        font-weight: 700;
+        font-size: 20px;
+        margin-left: 40px;
+      }
+
+      .closeIcon {
+        width: fit-content;
+        height: fit-content;
+        padding: 4px 4px 0px 4px;
+        svg {
+          text-align: center;
+          font-size: 20px;
+        }
+      }
+
+      .closeIcon:hover {
+        background-color: var(--twitter-background);
+        border-radius: 50%;
+      }
+    }
+
+    .save {
+      width: fit-content;
+      padding: 12px 18px;
+      background-color: #000000;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 40px;
+      width: 34px;
+      text-align: center;
+      color: white;
+    }
+
+    .save:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .editBanner {
+    margin-top: 12px;
+    position: relative;
+    .bannerImage {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .photoBannerIcon {
+      position: absolute;
+      width: fit-content;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fefefe;
+      padding: 5px 5px 3px 5px;
+      border-radius: 50%;
+    }
+
+    .photoBannerIcon:hover {
+      background-color: var(--twitter-background);
+    }
+  }
+
+  .editAvatar {
+    position: relative;
+    .avatarImage {
+      border-radius: 50%;
+      position: absolute;
+      .avatar {
+        width: 120px;
+        height: 120px;
+        border: 5px solid var(--twitter-background);
+        top: -65px;
+        left: 20px;
+      }
+    }
+    .photoAvatar {
+      width: fit-content;
+      position: absolute;
+      top: -13px;
+      left: 72px;
+
+      .photoAvatarIcon {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .editInput {
+    border-radius: 10px;
+    margin-top: 100px;
+
+    .input {
+      width: 100%;
+      margin: 10px 0;
+      color: var(--twitter-color);
+      // border: 1px solid var(--twitter-background);
+      border-radius: 5px;
+    }
+  }
+}

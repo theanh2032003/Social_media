@@ -1,0 +1,189 @@
+@mixin breakpoint($point) {
+  @media only screen and (max-width: $point) {
+    @content;
+  }
+}
+
+.homePage {
+  $sidebarWidth: 280px;
+  $contentWidth: 600px;
+  $widgetWidth: 350px;
+  $messageSearchWidth: 450px;
+  $messageWidth: 600px;
+  $gap: 20px;
+
+  display: grid;
+  grid-template-columns: $sidebarWidth 1fr $widgetWidth; // Sidebar - Nội dung chính - Widget
+  gap: $gap;
+
+  .sidebar {
+    width: $sidebarWidth;
+    position: fixed;
+    top: 20px;
+    height: calc(
+      100vh - 40px
+    ); // Chiều cao bằng chiều cao của cửa sổ trình duyệt trừ 40px padding top và bottom
+    overflow-y: auto; // Cho phép cuộn nếu nội dung quá dài
+    left: calc(
+      (100vw - #{$sidebarWidth} - #{$contentWidth} - #{$widgetWidth} - #{$gap}) /
+        2
+    );
+    // Các thuộc tính khác...
+  }
+
+  .widget {
+    width: $widgetWidth;
+    position: fixed;
+    top: 10px;
+    height: calc(
+      100vh - 20px
+    ); // Chiều cao bằng chiều cao của cửa sổ trình duyệt trừ 10px padding top
+    right: calc(
+      (100vw - #{$sidebarWidth} - #{$contentWidth} - #{$widgetWidth} - #{$gap}) /
+        2
+    );
+    // Các thuộc tính khác...
+  }
+
+  .content {
+    width: $contentWidth;
+    margin-left: calc(
+      (100vw - #{$sidebarWidth} - #{$contentWidth} - #{$widgetWidth} - #{$gap}) /
+        2 + #{$sidebarWidth}
+    );
+    border-left: 1px solid var(--twitter-background);
+    border-right: 1px solid var(--twitter-background);
+    // Các thuộc tính khác...
+  }
+
+  .messageSearch {
+    width: $messageSearchWidth;
+    margin-left: calc(
+      (100vw - #{$sidebarWidth} - #{$contentWidth} - #{$widgetWidth} - #{$gap}) /
+        2 + #{$sidebarWidth} - 50px
+    );
+    border-left: 1px solid var(--twitter-background);
+    border-right: 1px solid var(--twitter-background);
+  }
+
+  .message {
+    width: $messageWidth;
+    margin-left: calc(
+      (100vw - #{$sidebarWidth} - #{$contentWidth} - #{$widgetWidth} - #{$gap}) /
+        2 + #{$messageSearchWidth} - 18px - 50px
+    );
+    border-right: 1px solid var(--twitter-background);
+
+  }
+
+  @include breakpoint(1402px){
+    .messageSearch{
+      width: 390px ;
+    }
+    .message {
+     
+      margin-left: calc(
+        (100vw - #{$sidebarWidth} - #{$contentWidth} - #{$widgetWidth} - #{$gap}) /
+          2 + #{$messageSearchWidth} - 18px - 50px - 60px
+      );
+  
+    }
+  }
+
+  @include breakpoint(1280px) {
+    .sidebar {
+      width: fit-content; // Thu gọn thanh sidebar ở màn hình nhỏ hơn
+      left: calc(
+        (
+          (
+              100vw - #{$sidebarWidth} + 220px - #{$contentWidth} - #{$widgetWidth} -
+                #{$gap}
+            ) / 2
+        )
+      );
+    }
+
+    .widget {
+      // display: none;
+      right: calc(
+        (
+            100vw - #{$sidebarWidth} + 200px - #{$contentWidth} - #{$widgetWidth} -
+              #{$gap}
+          ) / 2
+      );
+      // width: calc (100vw - #{$sidebarWidth} - #{$contentWidth} - #{$gap}) ;
+    }
+
+    .content {
+      grid-column: 1 / -1; // Content chiếm toàn bộ cột trên màn hình nhỏ hơn
+      margin-left: calc(
+        (
+            (
+                100vw - #{$sidebarWidth} + 200px - #{$contentWidth} - #{$widgetWidth} -
+                  #{$gap}
+              ) / 2
+          ) + 100px
+      );
+    }
+
+  }
+
+  @include breakpoint(1275px) {
+    .sidebar {
+      width: fit-content; // Thu gọn thanh sidebar ở màn hình nhỏ hơn
+      left: calc(
+        (
+          (
+              100vw - #{$sidebarWidth} + 220px - #{$contentWidth} - #{$widgetWidth} -
+                #{$gap}
+            ) / 2
+        )
+      );
+    }
+
+    .widget {
+      // width: calc(100vw - 100px - #{$contentWidth} - #{$gap});
+      max-width: $widgetWidth;
+      left: calc(
+        (
+            (
+                100vw - #{$sidebarWidth} + 200px - #{$contentWidth} - #{$widgetWidth} -
+                  #{$gap}
+              ) / 2
+          ) + 100px + #{$contentWidth}
+      );
+      // width: calc (100vw - #{$sidebarWidth} - #{$contentWidth} - #{$gap}) ;
+    }
+
+    .content {
+      grid-column: 1 / -1; // Content chiếm toàn bộ cột trên màn hình nhỏ hơn
+      margin-left: calc(
+        (
+            (
+                100vw - #{$sidebarWidth} + 200px - #{$contentWidth} - #{$widgetWidth} -
+                  #{$gap}
+              ) / 2
+          ) + 100px
+      );
+    }
+  }
+
+  @include breakpoint(1004px) {
+    .sidebar {
+      width: fit-content; // Thu gọn thanh sidebar ở màn hình nhỏ hơn
+      left: calc(
+        (100vw - #{$sidebarWidth} + 200px - #{$contentWidth} - #{$gap}) / 2
+      );
+    }
+
+    .widget {
+      display: none;
+      // right: 70px;
+    }
+
+    .content {
+      grid-column: 1 / -1; // Content chiếm toàn bộ cột trên màn hình nhỏ hơn
+      margin-left: calc((100vw + 200px - #{$contentWidth} - #{$gap}) / 2);
+    }
+  }
+}

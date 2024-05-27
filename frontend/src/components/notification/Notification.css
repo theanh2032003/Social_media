@@ -1,0 +1,54 @@
+.notifications {
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  height: 100vh;
+}
+
+.notification {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid var(--twitter-background);
+  width: 100%;
+}
+
+.notification:hover {
+  background-color: var(--twitter-background);
+}
+
+.btnNotification {
+  margin-top: 10px;
+  border: none;
+  border-radius: 0;
+}
+
+.accept,
+.deleteRequest {
+  background-color: var(--twitter-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.deleteRequest {
+  background-color: grey;
+  color: black;
+}
+
+.accept:hover {
+  /* background-color: var(--twitter-color); */
+  opacity: 0.8;
+}
+
+.deleteRequest:hover {
+  background-color: #f05246;
+}
